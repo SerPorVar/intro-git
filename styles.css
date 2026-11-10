@@ -1,0 +1,162 @@
+/* STREAMING_CHUNK:Defining global CSS variables and reset... */
+
+
+:root {
+--primary-color: #1e293b;
+--accent-color: #6366f1;
+--text-dark: #334155;
+--text-light: #ffffff;
+--subtitle-color: #fef08a; /* Color crema/amarillo cálido de alto contraste */
+--h3-color: #e2e8f0;
+--bg-light: #f8fafc;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: var(--text-dark);
+background-color: var(--bg-light);
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+/* STREAMING_CHUNK:Styling Hero header with hero.jpg background and dark overlay... */
+header.hero {
+position: relative;
+/* Imagen de fondo hero.jpg con fallback visual */
+background-image: url('hero.png'), url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1600&q=80');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+min-height: 65vh;
+
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 2rem 1rem;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Capa oscura superpuesta para maximizar contraste y legibilidad sobre la foto */
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(15, 23, 42, 0.65);
+z-index: 1;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 800px;
+}
+
+header.hero h1 {
+font-size: 4.5rem;
+font-weight: 800;
+color: var(--text-light);
+letter-spacing: -1px;
+margin-bottom: 0.5rem;
+text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Subtítulo mejorado con tono cálido llamativo y sombra de contraste */
+header.hero .subtitle {
+font-size: 2rem;
+font-weight: 600;
+color: var(--subtitle-color);
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+header.hero h3 {
+font-size: 1.35rem;
+font-weight: 400;
+color: var(--h3-color);
+font-style: italic;
+text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* STREAMING_CHUNK:Styling main content area and grid layout... */
+main {
+max-width: 1100px;
+margin: 3.5rem auto;
+padding: 0 1.5rem;
+flex: 1;
+}
+
+.two-columns {
+display: flex;
+gap: 2rem;
+flex-wrap: wrap;
+}
+
+.column {
+flex: 1 1 320px;
+background: #ffffff;
+padding: 2.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+border: 1px solid #e2e8f0;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.column:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.column h4 {
+font-size: 1.35rem;
+color: var(--primary-color);
+margin-bottom: 1rem;
+border-bottom: 3px solid var(--accent-color);
+display: inline-block;
+padding-bottom: 0.25rem;
+}
+
+.column p {
+margin-bottom: 1rem;
+color: #475569;
+text-align: justify;
+}
+
+/* STREAMING_CHUNK:Footer styles... */
+footer {
+background-color: var(--primary-color);
+color: var(--text-light);
+text-align: center;
+padding: 2rem 1rem;
+margin-top: auto;
+border-top: 4px solid var(--accent-color);
+}
+
+footer p {
+font-size: 0.95rem;
+opacity: 0.9;
+}
+
+/* STREAMING_CHUNK:Responsive adjustments... */
+@media (max-width: 768px) {
+header.hero h1 {
+font-size: 3rem;
+}
+
+header.hero .subtitle {
+    font-size: 1.5rem;
+}
+
+header.hero h3 {
+    font-size: 1.1rem;
+}
+
+main {
+    margin: 2rem auto;
+}
+
+
+}
